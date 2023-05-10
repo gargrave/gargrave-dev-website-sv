@@ -1,14 +1,10 @@
 export const intro = `
-A handful of non-work-related projects I have built when I have had some
-free time. Time and energy to work on this kind of stuff outside of work
-is generally fairly limited, but I do my best to ensure I stay
-up-to-date on new technologies and push myself to learn new things and
-apply them in a project somewhere. Some of these are pretty old, though,
-so tread carefully!
+A handful of miscellaneous side projects I have built here and there. Time and energy to
+work on this kind of stuff outside of work is generally fairly limited, but I do my best to stay
+up-to-date on all the fun new shiny things out there, try to learn new stuff, and
+apply said stuff in a project somewhere. 
 
-Side note: many of these have demo links, but I really don't have time
-to actually maintain them, so don't hold it against me if you run into
-any issues.
+The links here should all be working to the best of my knowledge, but don't hold it against me if you come across any broken links or anything. The Internet is hard.
 
 Also: be sure to [check out my GitHub profile](https://github.com/gargrave?tab=repositories)
 for many more various projects and experiments!
@@ -16,15 +12,39 @@ for many more various projects and experiments!
 
 export const data = [
 	{
+		title: 'My Website (yes, this one!)',
+		subtitle: 'The very website you are looking at!',
+		summary: [
+			"Writing this gives me a strange sense of recursion, but yes, it's the source for the website you are looking at right this very second.",
+			'Rebuilt from scratch in 2023 using [SvelteKit](https://kit.svelte.dev) because I wanted an excuse to finally see what all the fuss is about. If you want to contrast and compare Svelte/Kit and React, I am now prepared to do so!',
+			'The previous version is also linked below—it was built with React, but is otherwise mostly identical from a content standpoint.'
+		],
+		links: [
+			{
+				title: 'My Website on GitHub',
+				url: 'https://github.com/gargrave/gargrave-dev-website-sv'
+			},
+			{
+				title: 'My Previous Website (React)',
+				url: 'https://github.com/gargrave/gargrave-dev-website'
+			}
+		]
+	},
+	{
 		title: 'React Simple Select',
 		subtitle: 'A fairly small-ish implementation of a select-like component in React',
 		summary: [
-			'An experiment to try and build a "select-like" component in React. Inspired by **react-select**, but with the goal of having a simpler, more flexible API.'
+			'An experiment to try and build a "select-like" component in React. Inspired by **react-select**, but with the goal of having a simpler, more flexible API.',
+			"I was hoping to build a suitable replacement that my team could swap in for **react-select**, but as it turns out, it's pretty hard to build and maintain a feature-rich accessible select component. Who knew? A good learning exercise nonetheless."
 		],
 		links: [
 			{
 				title: 'React Simple Select on GitHub',
 				url: 'https://github.com/gargrave/react-simple-select'
+			},
+			{
+				title: 'React Simple Select Live Demo/Docs',
+				url: 'https://gargrave.github.io/react-simple-select/'
 			}
 		]
 	},
@@ -32,7 +52,7 @@ export const data = [
 		title: 'React Magic List',
 		subtitle: 'A virtualized list component for React',
 		summary: [
-			'A minimal implementation of a React virtualized list component. I built this as part of a learning session I led to demonstrate the value of vritualized lists.'
+			'A minimal implementation of a React virtualized list component. I built this as part of a demo for a learning session I led to demonstrate the value of virtualized lists.'
 		],
 		links: [
 			{
@@ -45,7 +65,8 @@ export const data = [
 		title: 'Velcrostrip',
 		subtitle: 'A general-use React UI component library',
 		summary: [
-			'An experiment at making a general-use component library for React, inspired by [Shoelace CSS](https://v1.shoelace.style/).'
+			'An experiment at making a general-use component library for React, inspired by early versions of [Shoelace CSS](https://shoelace.style/).',
+			'There are only a few components here, but the ones that are there are pretty nice. The loaders in particular were fun to work with.'
 		],
 		links: [
 			{
@@ -56,88 +77,16 @@ export const data = [
 	},
 	{
 		title: 'Gargame',
-		subtitle: 'An HTML5/Canvas game engine written in TypeScript.',
+		subtitle: 'An experiment to write an HTML5/Canvas game engine in TypeScript',
 		summary: [
 			'I have used quite a few different game engines over the years, both in JS/TS land and elsewhere, and there are always a few things I dislike about each of them.',
-			'The main goals here are keeping the engine as simple as possible and minimizing external dependencies--all of course, while pursuing the pipe dream of creating "the game engine of my dreams" (whatever that means).',
-			'This is definitely going to be in "WIP Mode" for quite a while, as there is a lot to do. Once it is game-ready, I will be porting some of my previous game over!'
+			'The main goals here were keeping the engine as simple as possible and minimizing external dependencies—all of course, while pursuing the pipe dream of creating "the game engine of my dreams" (whatever that means).',
+			'This was fun to work on, but ultimately way too much time and effort to ever get it to a production-ready state.'
 		],
 		links: [
 			{
 				title: 'Gargame on GitHub',
 				url: 'https://github.com/gargrave/gargame'
-			}
-		]
-	},
-	{
-		title: 'Bookly Jr.',
-		subtitle:
-			'A "books and authors" CRUD app. Track your favorite authors, then track their books! Amazing!',
-		summary: [
-			"Bookly resurrected! Not really--this is effectively a more up-to-date fork of the previous Bookly frontend, now using Firebase. I eventually abandoned it because I had to give up on Flow, and the project was sort of all-in on Flow, and it just wasn't worth the time to try to pull it all out.",
-			'I decided to just use Firebase since the database needs are so simple, and it was a major PITA keeping my own API updated and running.'
-		],
-		links: [
-			{
-				title: 'Bookly Jr. on GitHub',
-				url: 'https://github.com/gargrave/bookly-client-firebase'
-			}
-		]
-	},
-	{
-		title: 'Bookly Classic (Retired)',
-		subtitle:
-			'A "books and authors" CRUD app. Track your favorite authors, then track their books! Amazing!',
-		summary: [
-			"I intentionally kept the design of this app simple so I could focus on learning the Hapi ecosystem. Eventually, I just didn't have enough time anymore to continue building both the frontend and backend, so I ultimately moved this project to Firebase.",
-			'Frontend built with [Quasar framework](https://github.com/quasarframework/quasar), backend built with [HapiJS framework](https://github.com/hapijs/hapi). For more details, check out the demo and/or repos below!'
-		],
-		links: [
-			{
-				title: 'Bookly Classic on GitHub (frontend)',
-				url: 'https://github.com/gargrave/bookly-client-vue'
-			},
-			{
-				title: 'Bookly Classic on GitHub (backend)',
-				url: 'https://github.com/gargrave/bookly-server'
-			}
-		]
-	},
-	{
-		title: 'Snippets',
-		subtitle: 'A "save it for later" bookmarking app, similar to Pocket or Google Keep.',
-		summary: [
-			"I have used Pocket and Keep off and on for a few years, and while I like them both, I also have many complaints about both of them. So I built this to include only the features I like without any of the extra junk I don't like.",
-			'Frontend built with [VueJS](https://github.com/vuejs/vue) + [Element UI](https://github.com/ElemeFE/element), backend built with [Django REST Framework](https://github.com/encode/django-rest-framework). For more details, check out the demo and/or repos below!',
-			"**Note**: The backend is deployed on a free Heroku dyno, so if it takes a few seconds to spin up, don't panic! Everything is going to be okay, I promise!"
-		],
-		links: [
-			{
-				title: 'Snippets on GitHub (frontend)',
-				url: 'https://github.com/gargrave/snippets-client'
-			},
-			{
-				title: 'Snippets on GitHub (backend)',
-				url: 'https://github.com/gargrave/snippets-server'
-			}
-		]
-	},
-	{
-		title: 'GameOn',
-		subtitle: 'An app to tracking gaming habits.',
-		summary: [
-			'A fairly simple app to allow you to track your gaming habits. I used to have a strong, very non-scientific fixation with seeing what games I was playing when, and for how many days, so I guess long-story-short, I built an app to do just that.',
-			'Frontend built with [Quasar framework](https://github.com/quasarframework/quasar), backend built with [Django REST Framework](https://github.com/encode/django-rest-framework). For more details, check out the demo and/or repos below!',
-			"**Note**: The backend is deployed on a free Heroku dyno, so if it takes a few seconds to spin up, don't panic! Everything is going to be okay, I promise!"
-		],
-		links: [
-			{
-				title: 'GameOn on GitHub (frontend)',
-				url: 'https://github.com/gargrave/gameon-client-quasar'
-			},
-			{
-				title: 'GameOn on GitHub (backend)',
-				url: 'https://github.com/gargrave/gameon-server'
 			}
 		]
 	},
@@ -157,24 +106,6 @@ export const data = [
 			{
 				title: 'Space Junk on GitHub',
 				url: 'https://github.com/gargrave/SpaceJunk'
-			}
-		]
-	},
-	{
-		title: 'Fancy Plants [Game]',
-		subtitle: 'A very weird, short, hastily-made puzzle game.',
-		summary: [
-			'This is a backup/dump of a sort-of-crappy game I made in 2013 as one of those "make a game in a week" kinds of things. It\'s not exactly game-of-the-year material, but it\'s... something, I guess.',
-			"I used [LibGDX game engine](https://github.com/libgdx/libgdx) for this one, and it's really the only game I ever completed in Java."
-		],
-		links: [
-			{
-				title: 'Fancy Plants game download',
-				url: 'https://github.com/gargrave/fancy-plants/releases/tag/1.0'
-			},
-			{
-				title: 'Fancy Plants on GitHub',
-				url: 'https://github.com/gargrave/fancy-plants'
 			}
 		]
 	}

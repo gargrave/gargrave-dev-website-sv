@@ -4,28 +4,24 @@ export default [
 		subtitle: '(advanced)'
 	},
 	{
-		title: 'Python, C#, Ruby, Java, PHP',
-		subtitle: '(proficient)'
-	},
-	{
 		title: 'Frontend web development',
-		subtitle: '(React/Redux, Angular, Vue, jQuery)'
-	},
-	{
-		title: 'CSS pre-processors and frameworks',
-		subtitle: '(Sass, Styled Components, Bootstrap)'
+		subtitle: '(React/Redux, Svelte, Angular, Vue, jQuery)'
 	},
 	{
 		title: 'Mobile-first responsive UI development',
 		subtitle: ''
 	},
 	{
-		title: 'Backend web development',
-		subtitle: '(Node, Django, Rails)'
+		title: 'CSS pre-processors and frameworks',
+		subtitle: '(Sass, Tailwind, Styled Components, Bootstrap)'
 	},
 	{
-		title: 'Server management',
-		subtitle: '(Nginx, Docker, Digital Ocean, Heroku)'
+		title: 'Python, C#, Ruby, Java, PHP',
+		subtitle: '(proficient)'
+	},
+	{
+		title: 'Backend web development',
+		subtitle: '(Node, Django, Rails)'
 	},
 	{
 		title: 'Database management',

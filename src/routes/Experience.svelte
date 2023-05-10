@@ -48,6 +48,6 @@
 	}
 
 	.summary {
-		margin-top: 12px;
+		margin-top: 1rem;
 	}
 </style>
