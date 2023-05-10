@@ -1,5 +1,6 @@
 <script>
 	import About from './About.svelte';
+	import Contact from './Contact.svelte';
 	import Education from './Education.svelte';
 	import Experience from './Experience.svelte';
 	import Projects from './Projects.svelte';
@@ -17,6 +18,7 @@
 
 	<main>
 		<About />
+		<Contact />
 		<hr />
 		<Skills />
 		<hr />
@@ -44,7 +46,6 @@
 
 	:global(body) {
 		background-color: var(--bg-color);
-		background-image: url('whirlpool.png');
 		color: var(--text-color);
 		font-family: 'Lato', sans-serif !important;
 		font-size: 16px;

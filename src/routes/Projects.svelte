@@ -1,41 +1,47 @@
 <script>
 	import { marked } from 'marked';
+	import { Section } from '$lib/components';
 	import { data, intro } from '$lib/data/projects';
 </script>
 
-<section id="projects">
-	<h2>Projects, Experiments, and Other Such Nonsense</h2>
+<Section slug="projects" title="Projects, Experiments, and Other Such Nonsense">
+	{@html marked.parse(intro)}
 
-	<div class="content">
-		{@html marked.parse(intro)}
-	</div>
+	<div class="project-list">
+		{#each data as project}
+			<div class="project">
+				<h3 class="title">{project.title}</h3>
 
-	{#each data as project}
-		<div class="project">
-			<h3 class="title">{project.title}</h3>
-
-			<div class="body">
-				<h4>{project.subtitle}</h4>
-				{#each project.summary as summary}
-					{@html marked.parse(summary)}
-				{/each}
-
-				<h4 class="linksTitle">Related links (external):</h4>
-				<ul>
-					{#each project.links as link}
-						<li><a href={link.url} rel="noopener noreferrer" target="_blank">{link.title}</a></li>
+				<div class="body">
+					<h4>{project.subtitle}</h4>
+					{#each project.summary as summary}
+						{@html marked.parse(summary)}
 					{/each}
-				</ul>
+
+					<h4 class="linksTitle">Related links (external):</h4>
+					<ul>
+						{#each project.links as link}
+							<li><a href={link.url} rel="noopener noreferrer" target="_blank">{link.title}</a></li>
+						{/each}
+					</ul>
+				</div>
 			</div>
-		</div>
-	{/each}
-</section>
+		{/each}
+	</div>
+</Section>
 
 <style lang="scss">
 	@use '../lib/mixins';
 
-	.content {
-		@include mixins.contentSection;
+	.project-list {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		@include mixins.lg() {
+			margin-left: -1.25rem;
+		}
 	}
 
 	.project {

@@ -1,28 +1,21 @@
 <script>
+	import { Section } from '$lib/components';
 	import skills from '$lib/data/skills';
 </script>
 
-<section id="skills">
-	<h2>Skills</h2>
-
-	<div class="content">
-		<ul>
-			{#each skills as skill}
-				<li>
-					<strong>{skill.title}</strong>
-					<span class="subtitle">{skill.subtitle}</span>
-				</li>
-			{/each}
-		</ul>
-	</div>
-</section>
+<Section slug="skills" title="Skills">
+	<ul>
+		{#each skills as skill}
+			<li>
+				<strong>{skill.title}</strong>
+				<span class="subtitle">{skill.subtitle}</span>
+			</li>
+		{/each}
+	</ul>
+</Section>
 
 <style lang="scss">
 	@use '../lib/mixins';
-
-	.content {
-		@include mixins.contentSection;
-	}
 
 	ul {
 		@include mixins.sm {

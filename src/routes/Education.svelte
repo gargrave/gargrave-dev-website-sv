@@ -1,27 +1,18 @@
 <script>
+	import { Section } from '$lib/components';
 	import data from '$lib/data/education';
 </script>
 
-<section id="education">
-	<h2>Education</h2>
+<Section slug="education" title="Education">
+	{#each data as edu}
+		<div class="edu">
+			<h3>{edu.title}</h3>
+			<p>{edu.location}</p>
+		</div>
+	{/each}
+</Section>
 
-	<div class="content">
-		{#each data as edu}
-			<div class="edu">
-				<h3>{edu.title}</h3>
-				<p>{edu.location}</p>
-			</div>
-		{/each}
-	</div>
-</section>
-
-<style lang="scss">
-	@use '../lib/mixins';
-
-	.content {
-		@include mixins.contentSection;
-	}
-
+<style>
 	.edu:not(:first-of-type) {
 		margin-top: 16px;
 	}

@@ -1,39 +1,9 @@
 <script>
 	import { marked } from 'marked';
-	import { contact, intro } from '$lib/data/about';
-
-	const RESUME_LINK = 'https://www.dropbox.com/s/94otn62reycxas3/GabeHargrave-Resume.pdf?dl=0';
-	const LINKED_IN_LINK = 'https://www.linkedin.com/in/gabe-hargrave-264322133';
-	const GITHUB_LINK = 'https://github.com/gargrave';
+	import { Section } from '$lib/components';
+	import { intro } from '$lib/data/about';
 </script>
 
-<section id="about">
-	<h2>About Me</h2>
-	<div class="content">
-		{@html marked.parse(intro)}
-	</div>
-
-	<h3>Contact</h3>
-	<div class="content">
-		{@html marked.parse(contact)}
-		<ul>
-			<li>
-				<a href={RESUME_LINK}>Download my resume (PDF)</a>
-			</li>
-			<li>
-				<a href={LINKED_IN_LINK}>View my LinkedIn profile</a>
-			</li>
-			<li>
-				<a href={GITHUB_LINK}>View my GitHub profile</a>
-			</li>
-		</ul>
-	</div>
-</section>
-
-<style lang="scss">
-	@use '../lib/mixins';
-
-	.content {
-		@include mixins.contentSection;
-	}
-</style>
+<Section slug="about" title="About Me">
+	{@html marked.parse(intro)}
+</Section>
