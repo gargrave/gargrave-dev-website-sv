@@ -60,6 +60,14 @@
 		line-height: 1.5rem;
 	}
 
+	:global(ul) {
+		@include mixins.sm {
+			padding-left: 1rem;
+		}
+
+		line-height: 1.6rem;
+	}
+
 	:global(li) {
 		line-height: 1.6rem;
 	}

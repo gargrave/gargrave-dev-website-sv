@@ -29,7 +29,7 @@
 
 		@include mixins.lg {
 			line-height: 1.6rem;
-			padding-inline-start: inherit;
+			padding-inline-start: 1rem;
 		}
 	}
 

@@ -5,7 +5,7 @@ export default [
 	},
 	{
 		title: 'Frontend web development',
-		subtitle: '(React/Redux, Svelte, Angular, Vue, jQuery)'
+		subtitle: '(React/Redux, Svelte/Kit, Angular, Vue, jQuery)'
 	},
 	{
 		title: 'Mobile-first responsive UI development',

@@ -1,5 +1,6 @@
 <script>
 	import { marked } from 'marked';
+
 	import { Section } from '$lib/components';
 	import { contact } from '$lib/data/about';
 

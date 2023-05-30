@@ -22,6 +22,8 @@
 	@use '../mixins';
 
 	.content {
-		@include mixins.contentSection;
+		@include mixins.lg {
+			padding-left: 1.25rem;
+		}
 	}
 </style>
