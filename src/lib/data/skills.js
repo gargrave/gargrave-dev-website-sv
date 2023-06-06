@@ -5,7 +5,7 @@ export default [
 	},
 	{
 		title: 'Frontend web development',
-		subtitle: '(React/Redux, Svelte/Kit, Angular, Vue, jQuery)'
+		subtitle: '(React/Redux, NextJS, Svelte/Kit, Vue, jQuery)'
 	},
 	{
 		title: 'Mobile-first responsive UI development',
@@ -14,10 +14,6 @@ export default [
 	{
 		title: 'CSS pre-processors and frameworks',
 		subtitle: '(Sass, Tailwind, Styled Components, Bootstrap)'
-	},
-	{
-		title: 'Python, C#, Ruby, Java, PHP',
-		subtitle: '(proficient)'
 	},
 	{
 		title: 'Backend web development',
@@ -30,5 +26,9 @@ export default [
 	{
 		title: 'Game Development',
 		subtitle: '(C#/Unity, Godot, Lua, Java)'
+	},
+	{
+		title: 'Python, C#, Ruby, Java, PHP',
+		subtitle: '(proficient)'
 	}
 ];

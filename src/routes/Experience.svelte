@@ -12,26 +12,12 @@
 			<div>{exp.dates}</div>
 			<div class="summary">{exp.summary}</div>
 			{@html marked.parse(exp.bullets)}
-
-			<!-- {#if (exp.bullets || []).length}
-				<ul>
-					{#each exp.bullets as bullet}
-						<li>{@html marked.parse(bullet)}</li>
-					{/each}
-				</ul>
-			{/if} -->
 		</div>
 	{/each}
 </Section>
 
 <style lang="scss">
 	@use '../lib/mixins';
-
-	ul {
-		@include mixins.sm {
-			padding: 0.5rem 1rem;
-		}
-	}
 
 	.expDetail {
 		& + & {
