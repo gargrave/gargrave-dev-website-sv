@@ -1,3 +1,5 @@
-# My Personal Website
+# My Personal Website (gargrave.dev)
 
-[WIP] Re-building my personal website using SvelteKit. Nothing is deployed publicly yet, but once it is, this README will reflect that.
+My personal portfolio website, rebuilt in 2023 with SvelteKit.
+
+View the live website at [gargrave.dev](https://gargrave.dev/).

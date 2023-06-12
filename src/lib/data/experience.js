@@ -29,7 +29,7 @@ export default [
 - Joined existing frontend team to help resolve bugs, refactor, and expand legacy code
 - Led knowledge-share sessions to help establish a culture of maintainable, testable code
 - Backend development with Node + TypeScript
-- Technologies used: TypeScript, React/Redux, Emotion/Tailwind, Node
+- Technologies used: React/Redux (TypeScript), styling with Emotion & Tailwind, Node
 `
 	},
 	{
@@ -43,8 +43,8 @@ export default [
 - Acted as a guiding voice for setting development standards, choosing tooling & libraries, and helping maintain an effective team culture
 - Led cross-team instructional sessions to share solutions to common problems
 - Developed and executed a technical interview process specific to the team’s requirements
-- Provided mentoring and guidance for more junior developers
-- Technologies used: TypeScript, React/Redux, PWA, Sass, Jest, TestCafe, Django + JSON:API
+- Provided mentoring and guidance for other engineers and interns
+- Technologies used: React/Redux (TypeScript), styling with Sass & Emotion, PWA, Jest, TestCafe, Django + JSON:API
 `
 	},
 	{
@@ -55,7 +55,7 @@ export default [
 		bullets: `
 - Worked with functional team to plan, build, and maintain features in our part of the app
 - Collaborated on documentation both before and after feature releases
-- Built API endpoints (Rails) in conjunction with frontend features
+- Backend development with Ruby on Rails
 - Technologies used: React/Redux, Mocha/Chai, CoffeeScript, Sass, Rails, Vagrant, PostgreSQL
 `
 	},
