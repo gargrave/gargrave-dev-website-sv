@@ -4,7 +4,7 @@
 	import { Section } from '$lib/components';
 	import { contact } from '$lib/data/about';
 
-	const RESUME_LINK = 'https://www.dropbox.com/s/94otn62reycxas3/GabeHargrave-Resume.pdf?dl=0';
+	const RESUME_LINK = 'https://drive.google.com/file/d/1beuiLJfSYCiXC0NzcPIQBoxwDumpuxda/view?usp=drive_link';
 	const LINKED_IN_LINK = 'https://www.linkedin.com/in/gabe-hargrave-264322133';
 	const GITHUB_LINK = 'https://github.com/gargrave';
 </script>
