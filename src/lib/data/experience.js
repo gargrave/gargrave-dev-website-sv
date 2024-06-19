@@ -2,7 +2,7 @@ export default [
 	{
 		jobTitle: 'Lead Software Engineer',
 		company: 'Vacasa',
-		dates: '08/2022 to Present',
+		dates: '08/2022 to 07/2023',
 		summary: 'Overseeing frontend development for 2 teams maintaining 3 products',
 		bullets: `
 - Led a new team in launching _Guestworks_, a brand new product to help the company expand into previously untouched markets
