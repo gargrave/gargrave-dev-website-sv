@@ -10,9 +10,9 @@ and I'm happy to fulfill whatever role brings the most value.
 `;
 
 export const music = `
-While you peruse, you might enjoy listening to some of my music—it may help you get the full experience: 
+While you peruse, you might enjoy listening to some of my music—it may help you get the full "Gabe experience":
 
-- <a href="https://soundcloud.com/gakyha" rel="noopener noreferrer" target="_blank">My electronic music</a> 
+- <a href="https://gakyha.bandcamp.com" rel="noopener noreferrer" target="_blank">My techno/house sounds</a>
 - <a href="https://soundcloud.com/gabehargrave" rel="noopener noreferrer" target="_blank">My orchestral music</a> (I recommend "Arrival")
 `;
 

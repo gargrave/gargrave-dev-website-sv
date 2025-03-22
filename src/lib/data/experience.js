@@ -1,5 +1,12 @@
 export default [
 	{
+		jobTitle: 'Senior Software Engineer',
+		company: 'Fairly',
+		dates: '08/2023 to present',
+		summary: 'Senior engineer for vacation rental management platform Fairly',
+		bullets: ''
+	},
+	{
 		jobTitle: 'Lead Software Engineer',
 		company: 'Vacasa',
 		dates: '08/2022 to 07/2023',
