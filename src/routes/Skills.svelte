@@ -5,7 +5,7 @@
 
 <Section slug="skills" title="Skills">
 	<ul>
-		{#each skills as skill}
+		{#each skills as skill (skill.title)}
 			<li>
 				<strong>{skill.title}</strong>
 				<span class="subtitle">{skill.subtitle}</span>

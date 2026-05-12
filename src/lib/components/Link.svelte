@@ -1,6 +1,10 @@
 <script lang="ts">
-	export let target: string;
-	export let visible: boolean;
+	interface Props {
+		target: string;
+		visible: boolean;
+	}
+
+	let { target, visible }: Props = $props();
 </script>
 
 <a aria-hidden="true" href="#{target}" style="visibility: {visible ? 'inherit' : 'hidden'}"

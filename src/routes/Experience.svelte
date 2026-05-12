@@ -6,12 +6,12 @@
 </script>
 
 <Section slug="experience" title="Experience">
-	{#each experience as exp}
+	{#each experience as exp (`${exp.jobTitle}-${exp.company}-${exp.dates}`)}
 		<div class="expDetail">
 			<h3 class="jobTitle">{exp.jobTitle} @ {exp.company}</h3>
 			<div>{exp.dates}</div>
 			<div class="summary">{exp.summary}</div>
-			{@html marked.parse(exp.bullets)}
+			{@html marked(exp.bullets)}
 		</div>
 	{/each}
 </Section>

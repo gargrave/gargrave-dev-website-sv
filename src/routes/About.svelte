@@ -6,6 +6,6 @@
 </script>
 
 <Section slug="about" title="About Me">
-	{@html marked.parse(intro)}
-	{@html marked.parse(music)}
+	{@html marked(intro)}
+	{@html marked(music)}
 </Section>

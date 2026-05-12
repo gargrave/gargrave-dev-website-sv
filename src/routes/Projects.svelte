@@ -5,22 +5,22 @@
 </script>
 
 <Section slug="projects" title="Projects, Experiments, and Other Such Nonsense">
-	{@html marked.parse(intro)}
+	{@html marked(intro)}
 
 	<div class="project-list">
-		{#each data as project}
+		{#each data as project (project.title)}
 			<div class="project">
 				<h3 class="title">{project.title}</h3>
 
 				<div class="body">
 					<h4>{project.subtitle}</h4>
-					{#each project.summary as summary}
-						{@html marked.parse(summary)}
+					{#each project.summary as summary, i (i)}
+						{@html marked(summary)}
 					{/each}
 
 					<h4 class="linksTitle">Related links (external):</h4>
 					<ul>
-						{#each project.links as link}
+						{#each project.links as link (link.url)}
 							<li><a href={link.url} rel="noopener noreferrer" target="_blank">{link.title}</a></li>
 						{/each}
 					</ul>
@@ -48,7 +48,9 @@
 		background: #fefefe;
 		border: 1px solid #ccc;
 		border-radius: 0.25rem;
-		box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 9px 0 rgba(0, 0, 0, 0.07);
+		box-shadow:
+			0 2px 3px 0 rgba(0, 0, 0, 0.07),
+			0 1px 9px 0 rgba(0, 0, 0, 0.07);
 		margin: auto;
 		margin-top: 32px;
 		max-width: 600px;

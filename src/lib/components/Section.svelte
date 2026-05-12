@@ -1,20 +1,25 @@
 <script lang="ts">
 	import { Link } from '$lib/components';
 
-	export let slug: string;
-	export let title: string;
+	interface Props {
+		slug: string;
+		title: string;
+		children?: import('svelte').Snippet;
+	}
 
-	let linkVisible = false;
+	let { slug, title, children }: Props = $props();
+
+	let linkVisible = $state(false);
 </script>
 
 <section id={slug}>
-	<h2 on:pointerleave={() => (linkVisible = false)} on:pointerenter={() => (linkVisible = true)}>
+	<h2 onpointerleave={() => (linkVisible = false)} onpointerenter={() => (linkVisible = true)}>
 		{title}
 		<Link target={slug} visible={linkVisible} />
 	</h2>
 
 	<div class="content">
-		<slot />
+		{@render children?.()}
 	</div>
 </section>
 

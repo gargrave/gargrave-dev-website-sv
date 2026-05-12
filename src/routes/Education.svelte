@@ -4,7 +4,7 @@
 </script>
 
 <Section slug="education" title="Education">
-	{#each data as edu}
+	{#each data as edu (edu.title)}
 		<div class="edu">
 			<h3>{edu.title}</h3>
 			<p>{edu.location}</p>
