@@ -45,12 +45,12 @@
 	}
 
 	.project {
-		background: #fefefe;
-		border: 1px solid #ccc;
+		background: var(--card-bg);
+		border: 1px solid var(--card-border);
 		border-radius: 0.25rem;
 		box-shadow:
-			0 2px 3px 0 rgba(0, 0, 0, 0.07),
-			0 1px 9px 0 rgba(0, 0, 0, 0.07);
+			0 2px 3px 0 var(--card-shadow),
+			0 1px 9px 0 var(--card-shadow);
 		margin: auto;
 		margin-top: 32px;
 		max-width: 600px;
@@ -61,8 +61,8 @@
 	}
 
 	.title {
-		background: #dcdcdc;
-		color: #464646;
+		background: var(--card-header-bg);
+		color: var(--card-header-text);
 		margin: 0;
 		padding: 0.75rem 1rem;
 	}

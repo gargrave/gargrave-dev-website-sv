@@ -1,4 +1,5 @@
 import Link from './Link.svelte';
 import Section from './Section.svelte';
+import ThemeToggle from './ThemeToggle.svelte';
 
-export { Link, Section };
+export { Link, Section, ThemeToggle };

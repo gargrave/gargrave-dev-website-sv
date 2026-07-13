@@ -14,13 +14,15 @@
 	{@html marked(contact)}
 	<ul>
 		<li>
-			<a href={RESUME_LINK}>Download my resume (PDF)</a>
+			<a href={RESUME_LINK} target="_blank" rel="noopener noreferrer">Download my resume (PDF)</a>
 		</li>
 		<li>
-			<a href={LINKED_IN_LINK}>View my LinkedIn profile</a>
+			<a href={LINKED_IN_LINK} target="_blank" rel="me noopener noreferrer"
+				>View my LinkedIn profile</a
+			>
 		</li>
 		<li>
-			<a href={GITHUB_LINK}>View my GitHub profile</a>
+			<a href={GITHUB_LINK} target="_blank" rel="me noopener noreferrer">View my GitHub profile</a>
 		</li>
 	</ul>
 </Section>

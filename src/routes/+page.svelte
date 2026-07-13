@@ -5,14 +5,46 @@
 	import Experience from './Experience.svelte';
 	import Projects from './Projects.svelte';
 	import Skills from './Skills.svelte';
+	import { ThemeToggle } from '$lib/components';
 
 	const year = new Date().getFullYear();
 	const copyright = `© ${year} Gabe Hargrave`;
+
+	const siteUrl = 'https://gargrave.dev/';
+	const title = 'Gabe Hargrave | Software Engineer';
+	const description =
+		'Gabe Hargrave is a software engineer building web and product experiences with TypeScript, React, and SvelteKit. Portfolio, experience, projects, and contact info.';
+
+	const jsonLd = {
+		'@context': 'https://schema.org',
+		'@type': 'Person',
+		name: 'Gabe Hargrave',
+		jobTitle: 'Software Engineer',
+		url: siteUrl,
+		sameAs: ['https://github.com/gargrave', 'https://www.linkedin.com/in/gabe-hargrave-264322133']
+	};
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+	<meta name="description" content={description} />
+	<link rel="canonical" href={siteUrl} />
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Gabe Hargrave" />
+	<meta property="og:url" content={siteUrl} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<!-- TODO: add og:image (1200x630) once designed -->
+
+	{@html `<script type="application/ld+json">${JSON.stringify(jsonLd)}</` + `script>`}
+</svelte:head>
 
 <div class="mainContent">
 	<header>
 		<h1>Gabe Hargrave <small>Software Engineer</small></h1>
+		<ThemeToggle />
 	</header>
 	<hr />
 
@@ -42,6 +74,29 @@
 		--text-color: #242424;
 		--text-color-muted: #5f5f5f;
 		--divider-color: #b3b3b3;
+		--link-color: #1a5fb4;
+		--content-bg: rgba(255, 255, 255, 0.35);
+		--content-border: rgba(0, 0, 0, 0.1);
+		--card-bg: #fefefe;
+		--card-border: #ccc;
+		--card-header-bg: #dcdcdc;
+		--card-header-text: #464646;
+		--card-shadow: rgba(0, 0, 0, 0.07);
+	}
+
+	:global(:root[data-theme='dark']) {
+		--bg-color: #161616;
+		--text-color: #e8e8e8;
+		--text-color-muted: #a2a2a2;
+		--divider-color: #3a3a3a;
+		--link-color: #7ab0ff;
+		--content-bg: rgba(255, 255, 255, 0.03);
+		--content-border: rgba(255, 255, 255, 0.08);
+		--card-bg: #1e1e1e;
+		--card-border: #333;
+		--card-header-bg: #262626;
+		--card-header-text: #cfcfcf;
+		--card-shadow: rgba(0, 0, 0, 0.4);
 	}
 
 	:global(body) {
@@ -54,6 +109,17 @@
 
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
+		transition:
+			background-color 0.2s ease,
+			color 0.2s ease;
+	}
+
+	:global(:root[data-theme='dark'] body) {
+		background-image: none;
+	}
+
+	:global(a) {
+		color: var(--link-color);
 	}
 
 	:global(p) {
@@ -76,6 +142,13 @@
 		border: 0;
 		border-bottom: 1px dotted var(--divider-color);
 		margin: 1.5rem 0 1rem 0;
+	}
+
+	header {
+		align-items: center;
+		display: flex;
+		gap: 12px;
+		justify-content: space-between;
 	}
 
 	header h1 {
@@ -107,15 +180,15 @@
 	}
 
 	.mainContent {
-		background-color: rgba(255, 255, 255, 0.35);
+		background-color: var(--content-bg);
 		border: 0;
 		margin: 0 auto;
 		max-width: 800px;
 		padding: 20px;
 
 		@include mixins.lg {
-			border-left: solid 1px rgba(0, 0, 0, 0.1);
-			border-right: solid 1px rgba(0, 0, 0, 0.1);
+			border-left: solid 1px var(--content-border);
+			border-right: solid 1px var(--content-border);
 			padding: 24px 48px;
 		}
 	}
