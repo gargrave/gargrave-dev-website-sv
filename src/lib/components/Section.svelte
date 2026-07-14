@@ -8,14 +8,12 @@
 	}
 
 	let { slug, title, children }: Props = $props();
-
-	let linkVisible = $state(false);
 </script>
 
-<section id={slug}>
-	<h2 onpointerleave={() => (linkVisible = false)} onpointerenter={() => (linkVisible = true)}>
+<section id={slug} aria-labelledby="{slug}-heading">
+	<h2 id="{slug}-heading">
 		{title}
-		<Link target={slug} visible={linkVisible} />
+		<Link target={slug} />
 	</h2>
 
 	<div class="content">
@@ -30,5 +28,16 @@
 		@include mixins.lg {
 			padding-left: 1.25rem;
 		}
+	}
+
+	// Reveal the decorative permalink on hover/focus-within (CSS only — no JS
+	// pointer handlers needed).
+	h2 :global(.permalink) {
+		visibility: hidden;
+	}
+
+	h2:hover :global(.permalink),
+	h2:focus-within :global(.permalink) {
+		visibility: visible;
 	}
 </style>

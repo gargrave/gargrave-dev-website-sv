@@ -42,13 +42,14 @@
 </svelte:head>
 
 <div class="mainContent">
+	<a class="skipLink" href="#main-content">Skip to content</a>
 	<header>
 		<h1>Gabe Hargrave <small>Software Engineer</small></h1>
 		<ThemeToggle />
 	</header>
 	<hr />
 
-	<main>
+	<main id="main-content" tabindex="-1">
 		<About />
 		<Contact />
 		<hr />
@@ -122,6 +123,22 @@
 		color: var(--link-color);
 	}
 
+	// Consistent, always-visible focus indicator for keyboard users
+	// (links otherwise fall back to the thin UA default, easy to lose over
+	// the patterned background).
+	:global(a:focus-visible),
+	:global(button:focus-visible) {
+		border-radius: 2px;
+		outline: 2px solid var(--link-color);
+		outline-offset: 2px;
+	}
+
+	// Programmatic focus target for the skip link; don't show an outline when
+	// focused via the skip link (it's a scroll target, not an interactive control).
+	main:focus {
+		outline: none;
+	}
+
 	:global(p) {
 		line-height: 1.5rem;
 	}
@@ -190,6 +207,33 @@
 			border-left: solid 1px var(--content-border);
 			border-right: solid 1px var(--content-border);
 			padding: 24px 48px;
+		}
+	}
+
+	// Visually hidden until focused, then slides into view (top-left).
+	.skipLink {
+		background: var(--bg-color);
+		border: 1px solid var(--link-color);
+		border-radius: 0 0 0.25rem 0;
+		left: 0;
+		padding: 0.5rem 1rem;
+		position: absolute;
+		top: 0;
+		transform: translateY(-120%);
+		transition: transform 0.15s ease;
+		z-index: 10;
+
+		&:focus {
+			transform: translateY(0);
+		}
+	}
+
+	// Respect users who prefer reduced motion: neutralize the color/transform
+	// transitions used for theme switching, the skip link, and permalink reveal.
+	@media (prefers-reduced-motion: reduce) {
+		:global(*) {
+			animation-duration: 0.01ms !important;
+			transition-duration: 0.01ms !important;
 		}
 	}
 </style>
